@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPRINTER Same-Day Delivery</title>
+<meta name="description" content="SPRINTER — city-to-city same-day package delivery with vetted independent drivers, tracked Smart Boxes and a growing drop-off network. Starting at $99.">
+<meta name="theme-color" content="#F6F3F7">
+<meta property="og:title" content="SPRINTER — City to city. Same day.">
+<meta property="og:description" content="If it must be there today, SPRINTER does it. Starting at $99.">
+<meta property="og:image" content="assets/img/van.webp">
+<link rel="icon" href="assets/img/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.remove('no-js')</script>
+</head>
+<body>
+<!--BODY-START-->
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span>View</span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__in">
+    <img class="loader__mark" src="assets/img/logo-dark.png" alt="">
+    <div class="loader__bar"><i></i></div>
+    <div class="loader__meta"><span>Dispatching · LA → SF</span><span class="loader__num">000</span></div>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a href="#top" class="brand" aria-label="SPRINTER home"><img src="assets/img/logo-dark.png" alt="SPRINTER"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#solution" data-spy="solution">About</a>
+      <a href="#tech" data-spy="tech">Technology</a>
+      <a href="#services" data-spy="services">Services</a>
+      <a href="#drivers" data-spy="drivers">Drivers</a>
+      <a href="#robotics" data-spy="robotics">Robotics</a>
+      <a href="#who" data-spy="who">Expertise</a>
+      <a href="#why" data-spy="why">Benefits</a>
+      <a href="#team" data-spy="team">Team</a>
+      <a href="#contact" data-spy="contact">Contact</a>
+    </nav>
+    <div class="nav__cta">
+      
+      <a href="#book" class="btn btn--sm magnetic" data-cursor="Book">Book a delivery</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile">
+    <a href="#solution">About</a>
+    <a href="#tech">Technology</a>
+    <a href="#services">Services</a>
+    <a href="#drivers">Drivers</a>
+    <a href="#robotics">Robotics</a>
+    <a href="#who">Expertise</a>
+    <a href="#why">Benefits</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <p>sprinterone.us · Same-day, city to city.</p>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="streaks" aria-hidden="true"></canvas>
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <div class="eyebrow" data-hero>The same-day package delivery</div>
+        <h1 class="display hero__title" data-split>
+          <span class="line">City to city.</span>
+          <span class="line"><span class="pink">Same day.</span></span>
+        </h1>
+        <div class="hero__sub" data-hero>
+          <p><strong>If it must be there today!</strong> SPRINTER moves your package with vetted drivers already heading to its city.</p>
+          <div class="price-tag"><small>Starting<br>at</small><b>$99</b></div>
+        </div>
+        <div class="hero__ctas" data-hero>
+          <a href="#book" class="btn magnetic" data-cursor="Go">Get a same-day price
+            <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#services" class="btn btn--ghost magnetic">Explore services</a>
+        </div>
+      </div>
+
+      <div class="hero__visual" data-hero-visual>
+        <div class="hero__photo"><img src="assets/img/van.webp" alt="SPRINTER same-day parcel delivery van with a courier holding a SPRINTER box"></div>
+        <div class="float float--live"><span class="dot-live"></span>SPR-0412 · Driver en route</div>
+        <div class="float float--track">
+          <div class="route"><span>LAX</span><svg width="36" height="12" viewBox="0 0 36 12" aria-hidden="true"><path d="M0 6h32M27 1l5 5-5 5" stroke="#E0127A" stroke-width="2" fill="none"/></svg><span>SFO</span></div>
+          <div class="mini-line"><i></i></div>
+          <div class="row"><span>Picked up <b>9:14 AM</b></span><span>ETA <b>3:40 PM</b></span></div>
+        </div>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 132 132">
+            <defs><path id="circ" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+            <circle cx="66" cy="66" r="64" fill="#fff"/>
+            <g class="ring"><text><textPath href="#circ">Same day · City to city · Tracked · </textPath></text></g>
+            <circle cx="66" cy="66" r="32" fill="#E0127A"/>
+            <text x="66" y="72" text-anchor="middle" style="font-family:Archivo,Arial,sans-serif;font-style:italic;font-weight:900;font-size:19px;letter-spacing:0;fill:#fff">$99</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <form class="book" id="book" data-hero autocomplete="off">
+      <div class="book__title"><span class="h3">Instant route check</span><span><i class="dot-live"></i>Same-day for city pairs under 500 miles</span></div>
+      <div class="field"><label for="qFrom">Pickup city</label><select id="qFrom"></select></div>
+      <div class="field"><label for="qTo">Destination city</label><select id="qTo"></select></div>
+      <div class="seg" role="group" aria-label="Delivery timing">
+        <button type="button" data-svc="same" aria-pressed="true">Today</button>
+        <button type="button" data-svc="next" aria-pressed="false">Tomorrow</button>
+      </div>
+      <button class="btn" type="submit" data-cursor="Go">Check my route
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <div class="book__out" id="qOut" aria-live="polite"><span>› Choose two cities and press “Check my route”.</span></div>
+    </form>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__item"><span>Same-day</span><i></i><span class="o">City to city</span><i></i><span>Vetted drivers</span><i></i><span class="o">Tracked</span><i></i><span>From $99</span><i></i></div>
+    <div class="marquee__item"><span>Same-day</span><i></i><span class="o">City to city</span><i></i><span>Vetted drivers</span><i></i><span class="o">Tracked</span><i></i><span>From $99</span><i></i></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="chapter services" id="services">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div>
+        <div class="eyebrow">Our services</div>
+        <h2 class="display h2" data-split style="margin-top:20px">Everything that <span class="pink">can't wait.</span></h2>
+      </div>
+      <p class="lede">One network for urgent intercity shipping: same-day delivery, secure handling, drop-off points and dedicated routes for businesses.</p>
+    </div>
+
+    <div class="services__grid">
+      <a href="#book" class="svc svc--a svc--photo" data-cursor="Book">
+        <div class="svc__img" data-parallax><img src="assets/img/van-detail.webp" alt="SPRINTER van wrap reading Same Day Parcel Delivery" loading="lazy"></div>
+        <div class="svc__tag"><span class="tag tag--pink">Core service</span><span class="tag">Starting at $99</span></div>
+        <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="svc__body">
+          <h3 class="display">Same-day city-to-city delivery</h3>
+          <p>Your package reaches another city today. Vetted drivers already making the trip carry it, door to door.</p>
+        </div>
+      </a>
+      <a href="#how" class="svc svc--b svc--photo" data-cursor="How">
+        <div class="svc__img" data-parallax><img src="assets/img/truck-map.webp" alt="Parcel truck crossing a city map" loading="lazy"></div>
+        <div class="svc__tag"><span class="tag">Tracked end to end</span></div>
+        <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="svc__body">
+          <h3 class="display">Next-day intercity delivery</h3>
+          <p>When tomorrow is fine, the same network carries it overnight at a lower price than the major carriers.</p>
+        </div>
+      </a>
+      <a href="#smartbox" class="svc svc--c" data-cursor="View">
+        <div class="svc__img"><img src="assets/img/smartbox.webp" alt="Blue SPRINTER Smart Box" loading="lazy"></div>
+        <div class="svc__tag"><span class="tag tag--line">Planned</span></div>
+        <div class="svc__body">
+          <h3 class="display">Smart Box secure shipping</h3>
+          <p style="color:var(--mute)">Locked, GPS-tracked and opened only by the authorized recipient.</p>
+        </div>
+      </a>
+      <a href="#network" class="svc svc--d svc--photo" data-cursor="View">
+        <div class="svc__img" data-parallax><img src="assets/img/network-crop.webp" alt="Partners shaking hands in front of a global logistics network" loading="lazy"></div>
+        <div class="svc__tag"><span class="tag">3,000+ planned</span></div>
+        <div class="svc__body">
+          <h3 class="display">Drop-off &amp; pickup points</h3>
+          <p>Drop it at a partner retail or shipping location near you.</p>
+        </div>
+      </a>
+      <a href="#models" class="svc svc--e svc--photo" data-cursor="View">
+        <div class="svc__img" data-parallax><img src="assets/img/hands-crop.webp" alt="Hands handing over parcels" loading="lazy"></div>
+        <div class="svc__tag"><span class="tag">For businesses</span></div>
+        <div class="svc__body">
+          <h3 class="display">Dedicated routes</h3>
+          <p>Dedicated SPRINTER drivers move individual or multiple shipments between cities.</p>
+        </div>
+      </a>
+      <div class="svc svc--f">
+        <div class="svc__body">
+          <div class="eyebrow" style="color:#FF8FC4">Add-ons</div>
+          <h3 class="display" style="font-size:clamp(1.8rem,3.4vw,3.2rem)">Extra protection for <span style="color:#FF5CAB">what matters.</span></h3>
+          <p style="opacity:.75">Choose extra services for valuable or sensitive shipments.</p>
+          <div class="chips"><span class="chip">Insurance</span><span class="chip">Identity verification</span><span class="chip">Content verification</span><span class="chip">Smart shipping box</span><span class="chip">GPS trackers</span></div>
+        </div>
+        <div class="svc--f__art"><img src="assets/img/courier.webp" alt="SPRINTER courier holding branded boxes" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="problem__pin">
+    <div class="wrap problem__grid">
+      <div>
+        <div class="eyebrow">The problem</div>
+        <h2 class="display problem__title" data-split>Why wait until <span class="pink">tomorrow?</span></h2>
+        <ul class="problem__list">
+          <li class="pl"><span>01</span>Important packages often need to reach another city the same day.</li>
+          <li class="pl"><span>02</span>Traditional delivery networks are generally designed around next-day or multi-day delivery.</li>
+          <li class="pl"><span>03</span>Urgent intercity shipping can also be very expensive.</li>
+        </ul>
+      </div>
+      <div class="problem__visual">
+        <div class="problem__photo" data-parallax><img src="assets/img/truck-map.webp" alt="" loading="lazy"></div>
+        <div class="clock-card">
+          <div class="clock-top">
+            <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+              <circle class="face" cx="100" cy="100" r="94"/><g id="ticks"></g>
+              <line class="hand-h" id="handH" x1="100" y1="100" x2="100" y2="52"/>
+              <line class="hand-m" id="handM" x1="100" y1="100" x2="100" y2="24"/>
+              <circle class="hub" cx="100" cy="100" r="8"/>
+            </svg>
+            <div class="clock-readout"><span>Package waiting</span><b id="clockTxt">Day 1 · 9:00 AM</b></div>
+          </div>
+          <div class="bars">
+            <div class="bar bar--them"><div class="bar__label"><span>Typical overnight quote</span><b>$450–$612</b></div><div class="bar__track"><div class="bar__fill"></div></div></div>
+            <div class="bar bar--us"><div class="bar__label"><span>SPRINTER, today</span><b class="pink">from $99</b></div><div class="bar__track"><div class="bar__fill"></div></div></div>
+          </div>
+          <div class="bar__note">Example pricing · LA → SF · 5 lb · 20×20×20 in</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="better">
+  <div class="wrap"><h2 class="display" id="better">There has to be a <span class="pink">better way.</span></h2></div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="solution">
+  <div class="wrap sec-head sec-head--split solution__head">
+    <div>
+      <div class="eyebrow">The SPRINTER solution</div>
+      <h2 class="display h2" data-split style="margin-top:20px">Connecting packages with the road <span class="pink">already moving.</span></h2>
+    </div>
+    <p class="lede reveal">SPRINTER connects customers with vetted independent drivers traveling between cities. The driver is not making the trip because of the package.</p>
+  </div>
+  <div class="road-band dark">
+  <div class="road-stage" id="roadStage">
+    <div class="road-hud"><span>Driver trip · <b>already scheduled</b></span><span>Mile <b id="mile">000</b> / 381</span><span>Package · <b id="pkgState">waiting at pickup</b></span></div>
+    <svg class="road-svg" viewBox="0 0 1600 520" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <defs>
+        <linearGradient id="roadG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#241C44"/><stop offset="1" stop-color="#110C20"/></linearGradient>
+        <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#FFE8B0" stop-opacity=".55"/><stop offset="1" stop-color="#FFE8B0" stop-opacity="0"/></linearGradient>
+        <linearGradient id="trail" x1="1" x2="0"><stop offset="0" stop-color="#FF3D9A" stop-opacity=".85"/><stop offset="1" stop-color="#FF3D9A" stop-opacity="0"/></linearGradient>
+      </defs>
+      <g fill="#241C44">
+        <rect x="20" y="170" width="40" height="160"/><rect x="66" y="120" width="34" height="210"/><rect x="106" y="200" width="50" height="130"/><rect x="162" y="90" width="28" height="240"/><rect x="196" y="150" width="46" height="180"/><rect x="248" y="210" width="36" height="120"/>
+        <rect x="1330" y="160" width="40" height="170"/><rect x="1376" y="100" width="30" height="230"/><path d="M1412 330 L1432 60 L1452 330Z"/><rect x="1458" y="190" width="50" height="140"/><rect x="1514" y="130" width="34" height="200"/><rect x="1554" y="220" width="40" height="110"/>
+      </g>
+      <g fill="#FF3D9A" opacity=".55">
+        <rect x="74" y="140" width="4" height="4"/><rect x="84" y="160" width="4" height="4"/><rect x="170" y="120" width="4" height="4"/><rect x="170" y="150" width="4" height="4"/><rect x="206" y="180" width="4" height="4"/>
+        <rect x="1384" y="130" width="4" height="4"/><rect x="1392" y="170" width="4" height="4"/><rect x="1522" y="160" width="4" height="4"/><rect x="1468" y="220" width="4" height="4"/>
+      </g>
+      <text x="40" y="70" fill="#A79FC0" font-family="JetBrains Mono, monospace" font-size="18" letter-spacing="3">LOS ANGELES</text>
+      <text x="1340" y="40" fill="#A79FC0" font-family="JetBrains Mono, monospace" font-size="18" letter-spacing="3">SAN FRANCISCO</text>
+      <rect x="0" y="330" width="1600" height="120" fill="url(#roadG)"/>
+      <line x1="0" y1="332" x2="1600" y2="332" stroke="#FF3D9A" stroke-opacity=".4" stroke-width="2"/>
+      <line x1="0" y1="448" x2="1600" y2="448" stroke="#FF3D9A" stroke-opacity=".4" stroke-width="2"/>
+      <line id="laneDash" x1="0" y1="390" x2="1600" y2="390" stroke="#F5F1FA" stroke-opacity=".35" stroke-width="4" stroke-dasharray="40 36"/>
+      <g font-family="JetBrains Mono, monospace" font-size="14" fill="#A79FC0">
+        <text x="290" y="485">MI 0 · PICKUP</text><text x="690" y="485">MI 150</text><text x="1010" y="485">MI 300</text><text x="1260" y="485">MI 381 · DROP</text>
+      </g>
+      <g transform="translate(330 300)"><circle r="10" fill="#FF6B1A"/><circle r="22" fill="none" stroke="#FF6B1A" stroke-opacity=".5" stroke-width="2" class="pulse"/></g>
+      <g transform="translate(1300 300)"><circle r="10" fill="#3DDC8C"/><circle r="22" fill="none" stroke="#3DDC8C" stroke-opacity=".5" stroke-width="2" class="pulse"/></g>
+      <g id="pkg" transform="translate(316 248)"><rect width="30" height="26" rx="3" fill="#C9955A"/><rect x="12" width="6" height="26" fill="#FF3D9A"/></g>
+      <g id="car" transform="translate(-260 318)">
+        <rect x="-260" y="36" width="260" height="10" fill="url(#trail)"/>
+        <path d="M176 46 L420 20 L420 72 Z" fill="url(#beam)" transform="translate(-6 0)"/>
+        <path d="M0 58 L0 42 Q2 34 12 32 L44 28 L70 8 Q76 4 86 4 L134 4 Q144 4 150 10 L170 30 L190 34 Q200 36 200 46 L200 58 Q200 64 194 64 L6 64 Q0 64 0 58Z" fill="#F5F1FA"/>
+        <path d="M76 12 L88 10 L118 10 L118 30 L56 30 Z" fill="#1D1735"/><path d="M124 10 L138 10 Q144 10 148 14 L162 30 L124 30Z" fill="#1D1735"/>
+        <rect x="16" y="40" width="170" height="3" fill="#E0127A"/>
+        <rect x="186" y="38" width="12" height="6" rx="2" fill="#FFE8B0"/>
+        <rect x="0" y="40" width="6" height="7" rx="1" fill="#FF3B3B"/>
+        <g id="carPkg" opacity="0"><rect x="92" y="14" width="18" height="14" rx="2" fill="#C9955A"/><rect x="99" y="14" width="4" height="14" fill="#FF3D9A"/></g>
+        <g class="wheel" transform="translate(44 64)"><circle r="16" fill="#0B0816"/><circle r="7" fill="#A79FC0"/><rect x="-1.5" y="-14" width="3" height="10" fill="#A79FC0"/></g>
+        <g class="wheel" transform="translate(156 64)"><circle r="16" fill="#0B0816"/><circle r="7" fill="#A79FC0"/><rect x="-1.5" y="-14" width="3" height="10" fill="#A79FC0"/></g>
+      </g>
+    </svg>
+    <div class="road-lines">
+      <p class="display l1">The driver is already going there.</p>
+      <p class="display l2">Your package goes with them.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section class="chapter models" id="models">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Two delivery models</div>
+      <h2 class="display h2" data-split>One network. <span class="pink">Two</span> delivery models.</h2>
+    </div>
+    <div class="models__grid">
+      <article class="model tilt">
+        <div class="model__glow"></div>
+        <div class="model__tag"><span>Model · Route-match</span><span>Existing trips</span></div>
+        <div class="model__art">
+          <svg viewBox="0 0 500 270" aria-hidden="true">
+            <path id="rmRoute" d="M30 210 C150 210 170 70 300 80 S440 160 470 70" fill="none" stroke="#E0127A" stroke-width="3" stroke-dasharray="8 10" opacity=".7"/>
+            <path d="M150 245 C160 195 180 160 210 142" fill="none" stroke="#FF6B1A" stroke-width="3" class="rm-merge"/>
+            <circle cx="30" cy="210" r="7" fill="#E0127A"/><circle cx="470" cy="70" r="9" fill="#12A35B"/>
+            <rect x="136" y="238" width="24" height="20" rx="3" fill="#C9955A"/>
+            <circle r="9" fill="#16112A"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#rmRoute"/></animateMotion></circle>
+            <text x="30" y="244" fill="#645D77" font-family="JetBrains Mono, monospace" font-size="12">DRIVER TRIP</text>
+            <text x="390" y="46" fill="#645D77" font-family="JetBrains Mono, monospace" font-size="12">DESTINATION</text>
+            <text x="172" y="262" fill="#645D77" font-family="JetBrains Mono, monospace" font-size="12">YOUR PACKAGE</text>
+          </svg>
+        </div>
+        <div>
+          <h3 class="display">Route-match drivers</h3>
+          <p>Vetted independent drivers who are already traveling toward the destination can accept compatible package deliveries.</p>
+        </div>
+      </article>
+      <article class="model tilt">
+        <div class="model__glow"></div>
+        <div class="model__tag"><span>Model · Dedicated</span><span>SPRINTER routes</span></div>
+        <div class="model__art"><img src="assets/img/van.webp" alt="SPRINTER branded delivery van" loading="lazy"></div>
+        <div>
+          <h3 class="display">Dedicated SPRINTER drivers</h3>
+          <p>Independent-contractor drivers can accept dedicated SPRINTER routes and transport individual or multiple shipments between cities.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how__pin">
+    <div class="wrap how__top">
+      <div>
+        <div class="eyebrow">How SPRINTER works</div>
+        <h2 class="display" style="margin-top:18px">Simple. Fast. <span class="pink">Tracked.</span></h2>
+      </div>
+      <p class="lede" style="max-width:38ch">Six steps from your door to theirs. Follow sample shipment SPR-0412 as it moves.</p>
+    </div>
+    <div class="how__track" id="howTrack">
+      <div class="track-card dark" aria-label="Sample shipment tracking">
+        <div class="track-card__id"><span>SPR-0412 · Sample</span><span id="tcTime">09:02 AM</span></div>
+        <div class="track-card__route"><div>LAX<small>Los Angeles</small></div><svg width="40" height="14" viewBox="0 0 40 14" aria-hidden="true"><path d="M0 7h36M30 1l6 6-6 6" stroke="#FF3D9A" stroke-width="2" fill="none"/></svg><div style="text-align:right">SFO<small>San Francisco</small></div></div>
+        <div class="track-line"><i id="tcFill"></i><b id="tcDot"></b></div>
+        <div class="track-status">
+          <div><span>Status</span><b class="now" id="tcStatus">Booked</b></div>
+          <div><span>Driver</span><b id="tcDriver">Matching…</b></div>
+          <div><span>Smart Box</span><b>Locked · sealed</b></div>
+          <div><span>ETA</span><b>Today, 3:40 PM</b></div>
+        </div>
+      </div>
+      <article class="step" data-status="Booked"><div><div class="step__icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3 class="display">Book</h3><p>Enter the package, destination, and delivery timing.</p></div><div class="step__num">01</div></article>
+      <article class="step" data-status="Matched"><div><div class="step__icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><path d="M9 12h6"/><path d="M13 9l2 3-2 3"/></svg></div><h3 class="display">Match</h3><p>SPRINTER matches the shipment with an appropriate vetted driver.</p></div><div class="step__num">02</div></article>
+      <article class="step" data-status="Picked up"><div><div class="step__icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></div><h3 class="display">Pick up</h3><p>The driver receives the shipment.</p></div><div class="step__num">03</div></article>
+      <article class="step" data-status="In transit"><div><div class="step__icon"><svg viewBox="0 0 24 24"><path d="M2 16h13V6H2zM15 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><h3 class="display">Transport</h3><p>The package travels toward the destination city.</p></div><div class="step__num">04</div></article>
+      <article class="step" data-status="Tracking live"><div><div class="step__icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3 class="display">Track</h3><p>Shipment progress is monitored through the SPRINTER platform.</p></div><div class="step__num">05</div></article>
+      <article class="step" data-status="Delivered"><div><div class="step__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16 10"/></svg></div><h3 class="display">Deliver</h3><p>The recipient receives and confirms delivery.</p></div><div class="step__num">06</div></article>
+    </div>
+    <div class="how__progress"><i id="howBar"></i></div>
+  </div>
+</section>
+
+<!-- SMART BOX -->
+<section class="chapter box" id="smartbox">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div class="eyebrow">Safe &amp; secure</div>
+      <h2 class="display h2" data-split>Locked. Tracked. <span class="pink">Digitally controlled.</span></h2>
+      <p class="lede">The SPRINTER Smart Box: a durable, reusable shipping container designed for important and time-sensitive deliveries.</p>
+    </div>
+    <div class="box__stage">
+      <div class="feat-col">
+        <div class="feat fl"><span><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>GPS tracking</b><small>Live position, door to door</small></div></div>
+        <div class="feat fl"><span><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span><div><b>Electronic locking</b><small>Sealed until released</small></div></div>
+        <div class="feat fl"><span><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><div><b>Smartphone access</b><small>Unlock from the app</small></div></div>
+      </div>
+      <div class="box__img" id="boxImg">
+        <div class="box__ring"></div>
+        <img src="assets/img/smartbox.webp" alt="Blue SPRINTER Smart Box reusable shipping container" loading="lazy">
+        <img class="label" src="assets/img/box-label.webp" alt="" loading="lazy">
+        <div class="box__scan"></div>
+      </div>
+      <div class="feat-col">
+        <div class="feat fr"><span><svg viewBox="0 0 24 24"><path d="M9 7h11M9 12h11M9 17h11"/><circle cx="4.5" cy="7" r="1.5"/><circle cx="4.5" cy="12" r="1.5"/><circle cx="4.5" cy="17" r="1.5"/></svg></span><div><b>Digital chain of custody</b><small>Every handoff logged</small></div></div>
+        <div class="feat fr"><span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M12 8v5M12 16h.01"/></svg></span><div><b>Tamper monitoring</b><small>Alerts on any breach</small></div></div>
+        <div class="feat fr"><span><svg viewBox="0 0 24 24"><rect x="3" y="12" width="7" height="8" rx="1"/><rect x="12" y="8" width="9" height="12" rx="1"/></svg></span><div><b>Multiple box sizes</b><small>Envelope to parts crate</small></div></div>
+      </div>
+    </div>
+    <p class="planned">Planned features · in development</p>
+    <div class="custody">
+      <div class="custody__step"><svg class="lock" viewBox="0 0 80 80" aria-hidden="true"><rect x="18" y="36" width="44" height="34" rx="6"/><path class="shackle" d="M28 36 V26 a12 12 0 0 1 24 0 V36"/><circle cx="40" cy="52" r="4"/></svg><small>Pickup</small><p class="display">Sender <span class="pink">locks</span> it.</p></div>
+      <div class="custody__step"><svg class="lock" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="26"/><circle cx="40" cy="40" r="14"/><circle cx="40" cy="40" r="4"/><path d="M40 6v10M40 64v10M6 40h10M64 40h10"/></svg><small>In transit</small><p class="display">SPRINTER <span class="pink">tracks</span> it.</p></div>
+      <div class="custody__step"><svg class="lock" viewBox="0 0 80 80" aria-hidden="true"><rect x="18" y="36" width="44" height="34" rx="6"/><path class="shackle open" d="M28 36 V26 a12 12 0 0 1 24 0 V36"/><circle cx="40" cy="52" r="4"/></svg><small>Drop-off</small><p class="display">Authorized recipient <span class="pink">opens</span> it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="chapter network" id="network">
+  <div class="wrap">
+    <div class="network__grid">
+      <div>
+        <div class="eyebrow">The network</div>
+        <div class="counter"><span id="count">0</span><sup>+</sup></div>
+        <h2 class="display network__title">Planned drop-off &amp; pickup points</h2>
+        <p class="lede" style="margin-top:20px">SPRINTER plans to build a nationwide network using existing independent retail, shipping, and franchise locations.</p>
+      </div>
+      <div class="map-wrap">
+        <canvas id="usmap" aria-label="Map of the United States with planned SPRINTER points lighting up" role="img"></canvas>
+        <div class="map-legend"><span><i></i>Planned points</span><span><i class="o"></i>First corridor · LA · SF · SD · LV</span></div>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="flow__line"></div>
+      <div class="flow__item"><img src="assets/img/network-crop.webp" alt="" loading="lazy"><small>Step 1</small><p class="h3">Drop it off</p></div>
+      <div class="flow__item"><img src="assets/img/hands-crop.webp" alt="" loading="lazy"><small>Step 2</small><p class="h3">Driver picks it up</p></div>
+      <div class="flow__item"><img src="assets/img/van-detail.webp" alt="" loading="lazy"><small>Step 3</small><p class="h3">SPRINTER moves it</p></div>
+      <div class="flow__item" style="background:var(--pink)"><img src="assets/img/courier.webp" alt="" loading="lazy" style="object-fit:contain;object-position:50% 100%"><small style="color:#fff">Step 4</small><p class="h3">Recipient gets it</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO USES -->
+<section class="chapter" id="who" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Who uses SPRINTER?</div>
+      <h2 class="display h2" data-split>When tomorrow is <span class="pink">too late.</span></h2>
+    </div>
+    <div class="aud">
+      <div class="aud__tabs" role="tablist" aria-label="Customer types" id="audTabs"></div>
+      <div class="aud__panel dark" role="tabpanel" id="audPanel" aria-live="polite">
+        <div class="aud__bg"><img id="audImg" src="assets/img/hands-crop.webp" alt=""></div>
+        <div class="eyebrow" id="audEyebrow">Customer</div>
+        <div>
+          <p class="big" id="audTitle">Businesses</p>
+          <p id="audText">Contracts, documents, replacement parts, samples.</p>
+        </div>
+        <div class="chips" id="audChips"></div>
+        <div class="aud__timer" id="audTimer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="chapter" id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why SPRINTER</div>
+      <h2 class="display h2" data-split>Built <span class="pink">different.</span></h2>
+    </div>
+    <div class="diff__list">
+      <div class="diff__row"><svg viewBox="0 0 24 24"><circle cx="13" cy="13" r="8"/><path d="M13 9v4l3 2M10 2h6M2 9h4M1 13h4M2 17h4"/></svg><p class="display">Same-day speed</p><p>City-to-city delivery when timing matters.</p></div>
+      <div class="diff__row"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><p class="display">Competitive pricing</p><p>A more accessible alternative for urgent intercity delivery.</p></div>
+      <div class="diff__row"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7l4 9M17 7l-4 9M7.5 6h9"/></svg><p class="display">Flexible network</p><p>Combines existing travel capacity with dedicated independent drivers.</p></div>
+      <div class="diff__row"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><p class="display">Secure delivery</p><p>Vetted drivers, tracking, secure packaging, and controlled handoffs.</p></div>
+      <div class="diff__row"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><p class="display">Smarter transportation</p><p>SPRINTER is designed to make better use of transportation already moving between cities.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVERS -->
+<section class="chapter drivers" id="drivers" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">For drivers</div>
+      <h2 class="display h2" data-split>Your vehicle. Your route. <span class="pink">Your opportunity.</span></h2>
+      <p class="lede">Earn money transporting packages between cities.</p>
+    </div>
+    <div class="van-stage" id="vanStage">
+      <img id="van" src="assets/img/van.webp" alt="SPRINTER same-day parcel delivery van with driver holding a SPRINTER box" loading="lazy">
+      <canvas class="speedlines" id="speedlines" aria-hidden="true"></canvas>
+      <div class="float float--earn"><small>Driver share</small><b>70%</b><small>of every delivery</small></div>
+    </div>
+    <div class="drivers__grid">
+      <div class="opt reveal"><p class="h3">Already driving there?</p><p>Make your existing trip more productive.</p></div>
+      <div class="opt reveal"><p class="h3">Want a dedicated route?</p><p>Accept SPRINTER delivery opportunities.</p></div>
+      <div class="split reveal">
+        <svg class="donut" viewBox="0 0 140 140" aria-hidden="true"><circle class="bg" cx="70" cy="70" r="56"/><circle class="fg" id="donut" cx="70" cy="70" r="56" stroke-dasharray="351.86" stroke-dashoffset="351.86"/></svg>
+        <div class="split__lbl">
+          <div><span>Driver share</span><b>70%</b></div>
+          <div><span>SPRINTER platform share</span><b>30%</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="calc reveal">
+      <div class="calc__controls">
+        <div class="range-row">
+          <label for="pk"><span>Packages on your trip</span><b id="pkVal">20</b></label>
+          <input type="range" id="pk" min="1" max="120" value="20">
+        </div>
+        <div class="range-row">
+          <span class="lbl">Example fare per package</span>
+          <div class="fares" id="fares" role="group" aria-label="Example fare">
+            <button type="button" data-fare="99" aria-pressed="true">$99</button>
+            <button type="button" data-fare="150" aria-pressed="false">$150</button>
+            <button type="button" data-fare="195" aria-pressed="false">$195</button>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--ink magnetic" style="justify-self:start" data-cursor="Apply">Apply to drive
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="calc__out">
+        <small>Your 70% on this trip</small>
+        <div class="num" id="earn">$1,386</div>
+        <p>Illustrative only · based on example fares, before your own costs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="chapter tech" id="tech" style="padding-top:0">
+  <div class="wrap tech__grid">
+    <div>
+      <div class="eyebrow">Technology</div>
+      <h2 class="display tech__title" data-split>Built for the next generation of logistics.</h2>
+      <p class="lede" style="margin-top:20px">Following six months of focused development, our international technology team completed the first version of the SPRINTER platform.</p>
+      <div class="mod-head"><i style="background:var(--ok)"></i>The platform is designed around</div>
+      <div class="modules">
+        <div class="module"><i></i>Driver matching</div><div class="module"><i></i>Shipment management</div>
+        <div class="module"><i></i>Tracking</div><div class="module"><i></i>Payments</div>
+        <div class="module"><i></i>Communications</div><div class="module"><i></i>Security</div>
+        <div class="module"><i></i>Analytics</div><div class="module"><i></i>Partner integration</div>
+      </div>
+      <div class="mod-head"><i style="border:1.5px solid var(--pink)"></i>Future development</div>
+      <div class="modules">
+        <div class="module next"><i></i>AI-assisted logistics</div><div class="module next"><i></i>Advanced route optimization</div>
+        <div class="module next"><i></i>Smart Box integration</div><div class="module next"><i></i>Robotics</div>
+        <div class="module next"><i></i>Autonomous delivery technology</div>
+      </div>
+    </div>
+    <div>
+      <div class="dash dark" id="dash">
+        <div class="dash__bar"><img src="assets/img/logo.png" alt=""><span>Dispatch console</span><span><i class="dot-live"></i>Live</span></div>
+        <div class="dash__body">
+          <div class="dash__list">
+            <div class="ship sel"><b>LA → SF</b><small>SPR-0412 · 5 lb</small><span class="pill t">In transit</span></div>
+            <div class="ship"><b>LV → LA</b><small>SPR-0409 · docs</small><span class="pill d">Delivered</span></div>
+            <div class="ship"><b>SD → LA</b><small>SPR-0415 · parts</small><span class="pill m">Matched</span></div>
+            <div class="ship"><b>SF → LV</b><small>SPR-0417 · sample</small><span class="pill m">Matched</span></div>
+            <div class="ship"><b>LA → SD</b><small>SPR-0411 · legal</small><span class="pill d">Delivered</span></div>
+          </div>
+          <div class="dash__map">
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <g stroke="rgba(255,255,255,.06)"><path d="M0 50h300M0 100h300M0 150h300M0 200h300M0 250h300M50 0v300M100 0v300M150 0v300M200 0v300M250 0v300"/></g>
+              <path id="dashRoute" d="M200 250 C180 200 150 190 130 150 S80 90 70 50" fill="none" stroke="#6D5FA8" stroke-width="3" stroke-linecap="round"/>
+              <path d="M200 250 C180 200 150 190 130 150 S80 90 70 50" fill="none" stroke="#FF3D9A" stroke-width="3" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300" id="dashProg"/>
+              <circle cx="200" cy="250" r="6" fill="#FF6B1A"/><circle cx="70" cy="50" r="7" fill="#3DDC8C"/>
+              <circle r="7" fill="#FF3D9A"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#dashRoute"/></animateMotion></circle>
+              <text x="210" y="270" fill="#A79FC0" font-family="JetBrains Mono, monospace" font-size="11">LA</text>
+              <text x="80" y="42" fill="#A79FC0" font-family="JetBrains Mono, monospace" font-size="11">SF</text>
+            </svg>
+          </div>
+        </div>
+        <div class="dash__stats"><div><small>Distance</small><b>381 mi</b></div><div><small>Box</small><b>Locked</b></div><div><small>ETA</small><b>3:40 PM</b></div></div>
+      </div>
+      <p class="sample">Platform preview · sample data</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROBOTICS -->
+<section class="chapter robo dark" id="robotics">
+  <div class="wrap">
+    <div class="eyebrow">Autonomous robotics</div>
+    <h2 class="display robo__title" data-split>From human drivers to <span class="pink">autonomous delivery.</span></h2>
+    <p class="lede" style="margin-top:24px">SPRINTER's long-term strategy extends beyond today's delivery network.</p>
+    <div class="robo__lane" id="roboLane">
+      <svg class="bot" id="bot" viewBox="0 0 300 220" aria-hidden="true">
+        <line x1="210" y1="40" x2="226" y2="0" stroke="#A79FC0" stroke-width="3"/><path d="M226 0 L250 8 L228 16Z" fill="#FF6B1A"/>
+        <rect x="30" y="40" width="240" height="130" rx="30" fill="#F5F1FA"/>
+        <rect x="30" y="40" width="240" height="44" rx="22" fill="#E0127A"/>
+        <rect x="30" y="66" width="240" height="18" fill="#E0127A"/>
+        <rect x="44" y="104" width="130" height="40" rx="8" fill="#1D1735"/>
+        <text x="56" y="130" fill="#F5F1FA" font-family="Archivo, Arial, sans-serif" font-style="italic" font-weight="900" font-size="18">SPRINTER</text>
+        <rect x="200" y="98" width="60" height="30" rx="15" fill="#1D1735"/>
+        <circle class="eye" cx="218" cy="113" r="6" fill="#FF8FC4"/><circle class="eye" cx="242" cy="113" r="6" fill="#FF8FC4"/>
+        <g class="bw" transform="translate(70 180)"><circle r="24" fill="#0B0816"/><circle r="10" fill="#A79FC0"/><rect x="-2" y="-20" width="4" height="10" fill="#A79FC0"/></g>
+        <g class="bw" transform="translate(150 180)"><circle r="24" fill="#0B0816"/><circle r="10" fill="#A79FC0"/><rect x="-2" y="-20" width="4" height="10" fill="#A79FC0"/></g>
+        <g class="bw" transform="translate(230 180)"><circle r="24" fill="#0B0816"/><circle r="10" fill="#A79FC0"/><rect x="-2" y="-20" width="4" height="10" fill="#A79FC0"/></g>
+      </svg>
+      <div class="dist"><span>TODAY · HUMAN DRIVERS</span><span>NEXT · AUTONOMOUS ROBOTS</span></div>
+    </div>
+    <div class="robo__facts">
+      <div class="fact reveal"><small>Production now</small><p class="h3">Ukraine</p><p>We presently have production of autonomous robots in Ukraine.</p></div>
+      <div class="fact reveal"><small>In negotiation</small><p class="h3">Dallas, Texas</p><p>We are presently negotiating a manufacturing site in Dallas, Texas, with the objective of dramatically expanding production of autonomous robots in the United States.</p></div>
+    </div>
+  </div>
+  <div class="apps" aria-label="Robotics applications">
+    <div class="apps__track" id="apps">
+      <span>Parcel delivery</span><span>Food delivery</span><span>Grocery delivery</span><span>Pharmacy &amp; medical delivery</span><span>Hospitality</span><span>Tourism</span><span>Mobile advertising</span><span>Enterprise applications</span>
+      <span aria-hidden="true">Parcel delivery</span><span aria-hidden="true">Food delivery</span><span aria-hidden="true">Grocery delivery</span><span aria-hidden="true">Pharmacy &amp; medical delivery</span><span aria-hidden="true">Hospitality</span><span aria-hidden="true">Tourism</span><span aria-hidden="true">Mobile advertising</span><span aria-hidden="true">Enterprise applications</span>
+    </div>
+  </div>
+  <div class="wrap robo__tag"><p class="display" data-split>One platform. One network. <span class="pink">Multiple ways to move.</span></p></div>
+</section>
+
+<!-- TEAM -->
+<section class="chapter team" id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Team</div>
+      <h2 class="display h2" data-split>Built by entrepreneurs, technologists &amp; <span class="pink">operators.</span></h2>
+    </div>
+    <article class="team__card reveal">
+      <div class="mono-gram"><span>RA</span><img src="assets/img/logo.png" alt=""></div>
+      <div>
+        <h3 class="display team__name">Roman Alexander</h3>
+        <div class="team__role">Founder &amp; CEO, Concord Pacific Corp.</div>
+        <p>Founder &amp; CEO of Master Craft International, entrepreneur, inventor, real estate developer, and sales and marketing executive with extensive experience building companies and bringing products and services to market.</p>
+        <p>Built Master Craft International from the ground up, recruiting and training teams, developing sales and telemarketing systems, creating high-impact presentations, and producing television commercials, advertising, PR, and integrated marketing campaigns.</p>
+        <p>Led luxury residential development projects in:</p>
+        <div class="places"><span class="chip">Bel Air</span><span class="chip">West Hollywood</span><span class="chip">Beverly Hills</span></div>
+      </div>
+    </article>
+    <div class="hire">
+      <div class="sec-head">
+        <div class="eyebrow">Team expansion</div>
+        <h2 class="display h2" data-split>We are building the team <span class="pink">for scale.</span></h2>
+        <p class="lede">SPRINTER is actively interviewing and recruiting qualified candidates in key areas:</p>
+      </div>
+      <div class="acc" id="acc">
+        <div class="acc__item open"><button class="acc__btn" aria-expanded="true"><span class="n">01</span><span class="display">Operations &amp; Logistics</span><span class="pm"></span></button><div class="acc__panel" style="height:auto"><p>Route optimization, logistics operations, driver-network development, and partner management.</p></div></div>
+        <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="n">02</span><span class="display">Engineering &amp; Product</span><span class="pm"></span></button><div class="acc__panel"><p>Platform enhancement, mobile applications, tracking, security, and technology integration.</p></div></div>
+        <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="n">03</span><span class="display">Sales &amp; Partnerships</span><span class="pm"></span></button><div class="acc__panel"><p>Customer acquisition, strategic partnerships, and retail and franchise development.</p></div></div>
+        <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="n">04</span><span class="display">Legal Counsel &amp; Compliance</span><span class="pm"></span></button><div class="acc__panel"><p>Corporate matters, contracts, transportation regulation, insurance, intellectual property, and risk management.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE -->
+<section class="chapter eco" id="future" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div class="eyebrow">The future</div>
+      <h2 class="display h2" data-split>Building a new logistics <span class="pink">ecosystem.</span></h2>
+      <p class="lede">SPRINTER's vision combines:</p>
+    </div>
+    <div class="eco__stage" id="eco">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="none" aria-hidden="true">
+        <ellipse cx="800" cy="500" rx="640" ry="360" fill="none" stroke="rgba(224,18,122,.22)" stroke-dasharray="6 10"/>
+        <ellipse cx="800" cy="500" rx="480" ry="250" fill="none" stroke="rgba(22,17,42,.08)"/>
+        <g id="ecoLines" stroke="rgba(224,18,122,.3)" stroke-width="1.5"></g>
+      </svg>
+      <div class="eco__core"><img src="assets/img/logo.png" alt="SPRINTER"></div>
+      <div class="eco__node"><i></i>Independent drivers</div>
+      <div class="eco__node"><i></i>Dedicated routes</div>
+      <div class="eco__node"><i></i>Smart packaging</div>
+      <div class="eco__node"><i></i>Retail drop points</div>
+      <div class="eco__node"><i></i>AI-assisted logistics</div>
+      <div class="eco__node"><i></i>Autonomous delivery robots</div>
+      <div class="eco__node"><i></i>U.S. robotics manufacturing</div>
+    </div>
+    <div class="eco__tag"><p class="display" data-split>One connected <span class="pink">SPRINTER network.</span></p></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="chapter final" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <p class="display final__lead" data-split>The next generation of intelligent delivery.</p>
+    <p class="display final__big" aria-label="SPRINTER.">Sprinter<span>.</span></p>
+    <div class="final__grid">
+      <div class="courier"><img src="assets/img/courier.webp" alt="SPRINTER courier holding two branded boxes" loading="lazy"></div>
+      <form class="contact" id="contactForm">
+        <p class="h3">Talk to SPRINTER</p>
+        <div class="field-row">
+          <div class="field"><label for="cName">Name</label><input id="cName" required placeholder="Your name"></div>
+          <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email" required placeholder="you@company.com"></div>
+        </div>
+        <div class="field"><label for="cTopic">I want to</label>
+          <select id="cTopic"><option>Ship a package today</option><option>Set up business deliveries</option><option>Drive with SPRINTER</option><option>Become a drop-off partner</option><option>Join the team</option><option>Talk about investing</option></select></div>
+        <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" placeholder="Pickup city, destination, timing…"></textarea></div>
+        <button class="btn magnetic" type="submit" data-cursor="Send">Send message
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="form-msg" id="formMsg" aria-live="polite"></div>
+        <div class="contact__info">
+          <div><small>Contact</small><span>Roman Alexander, CEO — Concord Pacific Corp.</span></div>
+          <div><small>Email</small><span>1000pacific@gmail.com</span></div>
+          <div><small>Phone</small><span>(310) 999 5015</span></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark">
+  <div class="wrap foot__in">
+    <img src="assets/img/logo.png" alt="SPRINTER">
+    <nav aria-label="Footer"><a href="#solution">About</a><a href="#tech">Technology</a><a href="#services">Services</a><a href="#drivers">Drivers</a><a href="#robotics">Robotics</a><a href="#who">Expertise</a><a href="#why">Benefits</a><a href="#team">Team</a><a href="#contact">Contact</a></nav>
+    <span>© 2026 Concord Pacific Corp. · sprinterone.us</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+<!--BODY-END-->
+</body>
+</html>
