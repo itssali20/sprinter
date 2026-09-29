@@ -376,6 +376,8 @@ section{position:relative}
 .flow__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s var(--ease)}
 .flow__item:hover img{transform:scale(1.07)}
 .flow__item::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(22,17,42,.05),rgba(22,17,42,.8))}
+.flow__item::before{background:linear-gradient(180deg,rgba(22,17,42,0) 25%,rgba(22,17,42,.92) 100%)!important}
+.flow__item .h3,.flow__item small{text-shadow:0 2px 14px rgba(10,6,24,.75)}
 .flow__item small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.16em;color:#FFB3D6}
 .flow__item .h3{font-size:1.25rem;margin-top:6px}
 .flow__line{position:absolute;top:50%;left:4%;right:4%;height:2px;background:linear-gradient(90deg,var(--orange),var(--pink));transform-origin:left;z-index:-1}
