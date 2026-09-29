@@ -9,7 +9,8 @@
 <meta property="og:title" content="SPRINTER — City to city. Same day.">
 <meta property="og:description" content="If it must be there today, SPRINTER does it. Starting at $99.">
 <meta property="og:image" content="assets/img/van.webp">
-<link rel="icon" href="assets/img/mark.png">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/img/mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -24,7 +25,7 @@
 
 <div class="loader" aria-hidden="true">
   <div class="loader__in">
-    <img class="loader__mark" src="assets/img/logo-dark.png" alt="">
+    <img class="loader__mark" src="assets/img/logo-dark.svg" width="224" height="84" alt="">
     <div class="loader__bar"><i></i></div>
     <div class="loader__meta"><span>Dispatching · LA → SF</span><span class="loader__num">000</span></div>
   </div>
@@ -32,7 +33,7 @@
 
 <header class="nav" id="nav">
   <div class="nav__in">
-    <a href="#top" class="brand" aria-label="SPRINTER home"><img src="assets/img/logo-dark.png" alt="SPRINTER"></a>
+    <a href="#top" class="brand" aria-label="SPRINTER home"><img src="assets/img/logo-dark.svg" width="224" height="84" alt="SPRINTER"></a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#solution" data-spy="solution">About</a>
       <a href="#tech" data-spy="tech">Technology</a>
@@ -75,7 +76,8 @@
   <div class="wrap">
     <div class="hero__grid">
       <div>
-        <div class="eyebrow" data-hero>The same-day package delivery</div>
+        <p class="hero__kicker display" id="heroKicker"><span class="k-line">The <span class="pink">same-day</span></span> <span class="k-line">package delivery</span></p>
+        <i class="k-bar" aria-hidden="true"></i>
         <h1 class="display hero__title" data-split>
           <span class="line">City to city.</span>
           <span class="line"><span class="pink">Same day.</span></span>
@@ -155,7 +157,7 @@
         </div>
       </a>
       <a href="#how" class="svc svc--b svc--photo" data-cursor="How">
-        <div class="svc__img" data-parallax><img src="assets/img/truck-map.webp" alt="Parcel truck crossing a city map" loading="lazy"></div>
+        <div class="svc__img" data-parallax><img src="assets/img/convoy.webp" alt="Convoy of SPRINTER cargo vans driving into a city skyline at sunset" loading="lazy" style="object-position:9% 50%"></div>
         <div class="svc__tag"><span class="tag">Tracked end to end</span></div>
         <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <div class="svc__body">
@@ -172,7 +174,7 @@
         </div>
       </a>
       <a href="#network" class="svc svc--d svc--photo" data-cursor="View">
-        <div class="svc__img" data-parallax><img src="assets/img/network-crop.webp" alt="Partners shaking hands in front of a global logistics network" loading="lazy"></div>
+        <div class="svc__img"><img src="assets/img/dropoff-card.webp" alt="A customer handing a blue SPRINTER box to a SPRINTER driver in front of a SPRINTER Drop-off and Pick-up Point store" loading="lazy" style="object-position:50% 50%"></div>
         <div class="svc__tag"><span class="tag">3,000+ planned</span></div>
         <div class="svc__body">
           <h3 class="display">Drop-off &amp; pickup points</h3>
@@ -180,21 +182,19 @@
         </div>
       </a>
       <a href="#models" class="svc svc--e svc--photo" data-cursor="View">
-        <div class="svc__img" data-parallax><img src="assets/img/hands-crop.webp" alt="Hands handing over parcels" loading="lazy"></div>
+        <div class="svc__img"><img src="assets/img/routes-driver.webp" alt="Smiling SPRINTER driver at the wheel of a cargo van with the Golden Gate Bridge behind" loading="lazy" style="object-position:50% 18%"></div>
         <div class="svc__tag"><span class="tag">For businesses</span></div>
         <div class="svc__body">
           <h3 class="display">Dedicated routes</h3>
           <p>Dedicated SPRINTER drivers move individual or multiple shipments between cities.</p>
         </div>
       </a>
-      <div class="svc svc--f">
-        <div class="svc__body">
-          <div class="eyebrow" style="color:#FF8FC4">Add-ons</div>
-          <h3 class="display" style="font-size:clamp(1.8rem,3.4vw,3.2rem)">Extra protection for <span style="color:#FF5CAB">what matters.</span></h3>
-          <p style="opacity:.75">Choose extra services for valuable or sensitive shipments.</p>
-          <div class="chips"><span class="chip">Insurance</span><span class="chip">Identity verification</span><span class="chip">Content verification</span><span class="chip">Smart shipping box</span><span class="chip">GPS trackers</span></div>
+      <div class="svc svc--f svc--poster">
+        <img class="poster__d" src="assets/img/protection.webp" width="1600" height="894" alt="Extra protection for what matters: insurance, identity verification, content verification, Smart shipping box and GPS tracking" loading="lazy">
+        <div class="poster__m">
+          <img src="assets/img/protection-hero.webp" width="1600" height="400" alt="Extra protection for what matters. A SPRINTER driver hands a blue Smart Box to a customer." loading="lazy">
+          <div class="poster__cards" tabindex="0" aria-label="Protection features"><img src="assets/img/protection-insurance.webp" width="294" height="421" alt="Insurance: your shipments are insured for added peace of mind" loading="lazy"><img src="assets/img/protection-identity.webp" width="294" height="421" alt="Identity verification: all drivers and customers are identity verified" loading="lazy"><img src="assets/img/protection-content.webp" width="294" height="421" alt="Content verification: optional check of what you are sending and receiving" loading="lazy"><img src="assets/img/protection-smartbox.webp" width="294" height="421" alt="Smart shipping box: tamper-resistant, weatherproof, durable and secure" loading="lazy"><img src="assets/img/protection-gps.webp" width="294" height="421" alt="GPS tracking: real-time tracking from pickup to drop-off" loading="lazy"></div>
         </div>
-        <div class="svc--f__art"><img src="assets/img/courier.webp" alt="SPRINTER courier holding branded boxes" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -214,7 +214,7 @@
         </ul>
       </div>
       <div class="problem__visual">
-        <div class="problem__photo" data-parallax><img src="assets/img/truck-map.webp" alt="" loading="lazy"></div>
+        <div class="problem__photo" data-parallax><img src="assets/img/convoy.webp" alt="SPRINTER cargo vans on the highway at sunset" loading="lazy" style="object-position:9% 50%"></div>
         <div class="clock-card">
           <div class="clock-top">
             <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
@@ -390,7 +390,6 @@
       <div class="box__img" id="boxImg">
         <div class="box__ring"></div>
         <img src="assets/img/smartbox.webp" alt="Blue SPRINTER Smart Box reusable shipping container" loading="lazy">
-        <img class="label" src="assets/img/box-label.webp" alt="" loading="lazy">
         <div class="box__scan"></div>
       </div>
       <div class="feat-col">
@@ -425,10 +424,10 @@
     </div>
     <div class="flow">
       <div class="flow__line"></div>
-      <div class="flow__item"><img src="assets/img/network-crop.webp" alt="" loading="lazy"><small>Step 1</small><p class="h3">Drop it off</p></div>
+      <div class="flow__item"><img src="assets/img/dropoff-store.webp" alt="SPRINTER Drop-off and Pick-up Point storefront" loading="lazy" style="object-position:50% 40%"><small>Step 1</small><p class="h3">Drop it off</p></div>
       <div class="flow__item"><img src="assets/img/hands-crop.webp" alt="" loading="lazy"><small>Step 2</small><p class="h3">Driver picks it up</p></div>
       <div class="flow__item"><img src="assets/img/van-detail.webp" alt="" loading="lazy"><small>Step 3</small><p class="h3">SPRINTER moves it</p></div>
-      <div class="flow__item" style="background:var(--pink)"><img src="assets/img/courier.webp" alt="" loading="lazy" style="object-fit:contain;object-position:50% 100%"><small style="color:#fff">Step 4</small><p class="h3">Recipient gets it</p></div>
+      <div class="flow__item"><img src="assets/img/receiver.webp" alt="Smiling woman receiving her delivery at the door" loading="lazy" style="object-position:50% 0%"><small>Step 4</small><p class="h3">Addressee receives it</p></div>
     </div>
   </div>
 </section>
@@ -546,7 +545,7 @@
     </div>
     <div>
       <div class="dash dark" id="dash">
-        <div class="dash__bar"><img src="assets/img/logo.png" alt=""><span>Dispatch console</span><span><i class="dot-live"></i>Live</span></div>
+        <div class="dash__bar"><img src="assets/img/logo.svg" alt=""><span>Dispatch console</span><span><i class="dot-live"></i>Live</span></div>
         <div class="dash__body">
           <div class="dash__list">
             <div class="ship sel"><b>LA → SF</b><small>SPR-0412 · 5 lb</small><span class="pill t">In transit</span></div>
@@ -610,6 +609,100 @@
   <div class="wrap robo__tag"><p class="display" data-split>One platform. One network. <span class="pink">Multiple ways to move.</span></p></div>
 </section>
 
+<!-- ROBOT FLEET -->
+<section class="chapter fleet" id="fleet">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div>
+        <div class="eyebrow">The robot fleet</div>
+        <h2 class="display h2" data-split style="margin-top:20px">Small robots. <span class="pink">Big deliveries.</span></h2>
+      </div>
+      <p class="lede">SPRINTER's autonomous robots are designed for the last mile: hot food, everyday parcels, and even a companion for the road.</p>
+    </div>
+
+    <div class="fleet__feat">
+      <article class="feature reveal">
+        <figure class="feature__img"><img src="assets/img/robots/hot-pizza.webp" width="1254" height="1254" alt="SPRINTER hot pizza delivery robot with its heated compartment open, showing steaming pizzas" loading="lazy"></figure>
+        <div class="feature__body">
+          <span class="tag tag--pink">01 · Hot pizza</span>
+          <h3 class="display">Always hot.</h3>
+          <p>A heated compartment keeps every pie oven-fresh from the kitchen to the doorstep, with no waiting and no lukewarm slices.</p>
+          <div class="chips"><span class="chip">Heated cargo</span><span class="chip">Real-time tracking</span><span class="chip">Contactless handoff</span></div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <figure class="feature__img"><img src="assets/img/robots/delivery.webp" width="1254" height="1254" alt="Friendly white SPRINTER delivery robot with glowing wheels outside a front door" loading="lazy"></figure>
+        <div class="feature__body">
+          <span class="tag tag--pink">02 · Delivery</span>
+          <h3 class="display">More than delivery.</h3>
+          <p>A small robot with a big job: secure, tracked, eco-friendly drop-offs that arrive at your door with a smile.</p>
+          <div class="chips"><span class="chip">Secure delivery</span><span class="chip">Real-time tracking</span><span class="chip">Eco-friendly</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL COMPANION -->
+<section class="chapter companion" id="companion" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div class="eyebrow">Travel companion</div>
+      <h2 class="display h2" data-split>More than a tour. <span class="pink">A companion for the journey.</span></h2>
+      <p class="lede">Your AI travel companion walks with you, guides you, informs you, translates for you and carries your bags, in 10+ languages.</p>
+    </div>
+    <div class="comp__list">
+      <figure class="comp reveal">
+        <div class="comp__img"><img src="assets/img/robots/companion-tour.webp" width="1312" height="1199" alt="A traveler walking beside a SPRINTER AI travel companion robot in front of St. Peter's Basilica, with its key features listed" loading="lazy"></div>
+        <figcaption><span class="tag tag--pink">01</span><b>More than a tour</b><span>Walk, explore and learn with a robot guide by your side</span></figcaption>
+      </figure>
+      <figure class="comp comp--wide reveal">
+        <div class="comp__img"><img src="assets/img/robots/companion-collage.webp" width="1536" height="1024" alt="Your AI Travel Companion: three scenes of travelers with the robot at the Colosseum, in an old town square and with a family, plus its features, views and languages" loading="lazy"></div>
+        <figcaption><span class="tag tag--pink">02</span><b>A guide for every traveler</b><span>Real stories. Real places. Real connections.</span></figcaption>
+      </figure>
+      <figure class="comp comp--clip reveal">
+        <div class="comp__img clip"><img class="clip__img" src="assets/img/robots/companion-vatican.webp" width="1370" height="1148" alt="Three travelers walking with a SPRINTER AI travel companion robot at the Vatican, with a speech bubble about St. Peter's Basilica" loading="lazy"><span class="clip__badge" aria-hidden="true"><i></i>Motion preview &middot; 0:04</span></div>
+        <figcaption><span class="tag tag--pink">03</span><b>Discover. Learn. Experience. Together.</b><span>Multilingual, at your pace</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- MORE ROBOTS CAROUSEL -->
+<section class="chapter fleet fleet--more" id="fleet-more" style="padding-top:0">
+  <div class="wrap">
+    <div class="fleet__more">
+      <div class="fleet__more-head">
+        <div>
+          <div class="eyebrow">More ways to move</div>
+          <h3 class="display fleet__more-title">One platform. <span class="pink">Endless routes.</span></h3>
+        </div>
+        <div class="car__ctrl">
+          <button type="button" id="carPrev" aria-label="Previous robots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" id="carNext" aria-label="Next robots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="car" id="fleetCar" role="region" aria-roledescription="carousel" aria-label="More SPRINTER robots" tabindex="0">
+        <figure class="car__slide"><img src="assets/img/robots/admate.webp" width="1536" height="1024" alt="AdMate mobile advertising robot on a busy city street" loading="lazy"><figcaption><b>AdMate</b><span>Mobile advertising</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/medimate.webp" width="1312" height="1199" alt="MediMate medicine delivery robot with secure lockers" loading="lazy"><figcaption><b>MediMate</b><span>Medicine delivery</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/community.webp" width="1536" height="1024" alt="Community robot with a screen greeting residents outside a retirement community" loading="lazy"><figcaption><b>Community</b><span>Bringing neighbors together</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/dropmate.webp" width="1312" height="1199" alt="DropMate parcel robot with secure smart lockers" loading="lazy"><figcaption><b>DropMate</b><span>Smart-locker parcels</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/pawpal.webp" width="1312" height="1199" alt="PawPal dog food delivery robot next to a golden retriever" loading="lazy"><figcaption><b>PawPal</b><span>Pet supplies</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/bloombot.webp" width="1312" height="1199" alt="BloomBot fresh flower delivery robot" loading="lazy"><figcaption><b>BloomBot</b><span>Fresh flowers</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/petalbot.webp" width="1254" height="1254" alt="PetalBot pink flower-shaped delivery robot handing over a bouquet" loading="lazy"><figcaption><b>PetalBot</b><span>Bouquets &amp; gifts</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/agrilink.webp" width="1312" height="1199" alt="AgriLink all-terrain farm supply robot" loading="lazy"><figcaption><b>AgriLink</b><span>Farm &amp; field</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/farm-strong.webp" width="1254" height="1254" alt="Six-wheeled all-terrain robot carrying seeds and fertilizer to a farm" loading="lazy"><figcaption><b>Farm Strong</b><span>All-terrain supplies</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/farm-supplies.webp" width="1254" height="1254" alt="Farm supplies delivery robot with seeds and tools" loading="lazy"><figcaption><b>Farm Supplies</b><span>Seeds &amp; tools</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/seafood.webp" width="1254" height="1254" alt="Refrigerated robot carrying fresh meat and seafood" loading="lazy"><figcaption><b>Fresh Meat &amp; Seafood</b><span>Cold-chain delivery</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/fresh-groceries.webp" width="1254" height="1254" alt="Refrigerated grocery delivery robot with fresh produce and drinks" loading="lazy"><figcaption><b>Fresh Groceries</b><span>Fridge-cold delivery</span></figcaption></figure>
+        <figure class="car__slide"><img src="assets/img/robots/napa.webp" width="1254" height="1254" alt="Napa Delivers robot carrying fine wines and spirits from Napa Valley to San Francisco with the Golden Gate Bridge behind" loading="lazy"><figcaption><b>Napa Delivers</b><span>Wine &amp; spirits</span></figcaption></figure>
+      </div>
+      <div class="car__bar" aria-hidden="true"><i id="carBar"></i></div>
+    </div>
+  </div>
+</section>
+
 <!-- TEAM -->
 <section class="chapter team" id="team">
   <div class="wrap">
@@ -618,16 +711,61 @@
       <h2 class="display h2" data-split>Built by entrepreneurs, technologists &amp; <span class="pink">operators.</span></h2>
     </div>
     <article class="team__card reveal">
-      <div class="mono-gram"><span>RA</span><img src="assets/img/logo.png" alt=""></div>
+      <div class="mono-gram"><span>RA</span><img src="assets/img/logo.svg" alt=""></div>
       <div>
         <h3 class="display team__name">Roman Alexander</h3>
-        <div class="team__role">Founder &amp; CEO, Concord Pacific Corp.</div>
-        <p>Founder &amp; CEO of Master Craft International, entrepreneur, inventor, real estate developer, and sales and marketing executive with extensive experience building companies and bringing products and services to market.</p>
-        <p>Built Master Craft International from the ground up, recruiting and training teams, developing sales and telemarketing systems, creating high-impact presentations, and producing television commercials, advertising, PR, and integrated marketing campaigns.</p>
-        <p>Led luxury residential development projects in:</p>
-        <div class="places"><span class="chip">Bel Air</span><span class="chip">West Hollywood</span><span class="chip">Beverly Hills</span></div>
+        <div class="team__role">CEO &amp; Founder</div>
+        <p class="team__lead">Serial entrepreneur with 32 years&rsquo; experience scaling sales, marketing and operations to launch and grow businesses.</p>
+        <dl class="facts">
+          <div><dt>Director of Sales &amp; Marketing <small>10+ years</small></dt><dd>Led and trained 1,200+ sales reps at the U.S.&rsquo;s largest national remodeling firm; designed multi-channel campaigns (TV, digital, radio, mail) that drove significant revenue growth.</dd></div>
+          <div><dt>Founder &amp; CEO, Master Craft International</dt><dd>Built the company from the ground up &mdash; hired and trained teams, created sales playbooks, telemarketing scripts and high-impact presentations, and executed PR and omnichannel marketing programs that delivered dramatic sales gains.</dd></div>
+        </dl>
+        <div class="team__key">Key highlights</div>
+        <dl class="facts">
+          <div><dt>Real estate development</dt><dd>Led luxury residential projects in Bel Air, West Hollywood and Beverly Hills; secured city approvals, managed architects/engineers and oversaw permitting and site reporting.</dd></div>
+          <div><dt>Inventor &amp; innovator</dt><dd>Serial product/service innovator with a track record of spotting market opportunities and bringing solutions to market while maintaining integrity, quality and customer focus.</dd></div>
+          <div><dt>Current focus</dt><dd>Combining deep sales, marketing and operational expertise to scale a global sustainability movement.</dd></div>
+        </dl>
       </div>
     </article>
+
+    <div class="members" id="members">
+      <div class="sec-head">
+        <div class="eyebrow">The people</div>
+        <h2 class="display h2" data-split>Team <span class="pink">members</span></h2>
+      </div>
+      <article class="member member--lead reveal">
+        <div class="member__mono"><span>NV</span></div>
+        <div>
+          <h3 class="display member__name">Nadiia Vasylieva, PhD</h3>
+          <div class="team__role">COO</div>
+          <p>Serial entrepreneur and technology executive with 32 years of experience scaling operations, sales, marketing, and digital businesses.</p>
+          <p>Former General Director, Microsoft Ukraine and Director-General, Microsoft Black Sea Hub, with executive leadership roles at Kyivstar and Ukroboronprom. Founder &amp; Chairwoman, Digital Transformation Institute.</p>
+        </div>
+      </article>
+      <div class="members__label"><span>Technical team</span></div>
+      <div class="members__grid">
+        <article class="member reveal">
+          <div class="member__mono"><span>DK</span></div>
+          <h3 class="display member__name">Dmytro Kostaryev, PhD</h3>
+          <div class="team__role">Technical direction</div>
+          <p>Leads Sprinter&rsquo;s technical direction and development execution, including engineering management, platform architecture, backend systems, APIs, mobile applications, infrastructure, DevOps, scaling, security, and the technology roadmap.</p>
+        </article>
+        <article class="member reveal">
+          <div class="member__mono"><span>MG</span></div>
+          <h3 class="display member__name">Mihail Guban</h3>
+          <div class="team__role">Software Engineer / Technical Team Member</div>
+          <p>Supports development of the Sprinter platform, including mobile applications, backend systems, APIs, administrative tools, routing, tracking, and related technical functionality.</p>
+        </article>
+        <article class="member reveal">
+          <div class="member__mono"><span>FX</span></div>
+          <h3 class="display member__name">Flexyti</h3>
+          <div class="team__role">Technical Development Company</div>
+          <p>Provides the pre-existing FlexyDrive Core technology platform and engineering resources supporting Sprinter&rsquo;s development. Flexyti retains ownership of FlexyDrive Core, while Sprinter owns Sprinter-specific modules under the applicable IP agreements.</p>
+        </article>
+      </div>
+    </div>
+
     <div class="hire">
       <div class="sec-head">
         <div class="eyebrow">Team expansion</div>
@@ -658,7 +796,7 @@
         <ellipse cx="800" cy="500" rx="480" ry="250" fill="none" stroke="rgba(22,17,42,.08)"/>
         <g id="ecoLines" stroke="rgba(224,18,122,.3)" stroke-width="1.5"></g>
       </svg>
-      <div class="eco__core"><img src="assets/img/logo.png" alt="SPRINTER"></div>
+      <div class="eco__core"><img src="assets/img/logo.svg" alt="SPRINTER"></div>
       <div class="eco__node"><i></i>Independent drivers</div>
       <div class="eco__node"><i></i>Dedicated routes</div>
       <div class="eco__node"><i></i>Smart packaging</div>
@@ -668,6 +806,50 @@
       <div class="eco__node"><i></i>U.S. robotics manufacturing</div>
     </div>
     <div class="eco__tag"><p class="display" data-split>One connected <span class="pink">SPRINTER network.</span></p></div>
+  </div>
+</section>
+
+<!-- LIVE NETWORK -->
+<section class="live dark" id="live">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div>
+        <div class="eyebrow">The live network</div>
+        <h2 class="display h2" data-split style="margin-top:20px">Intelligent delivery, <span class="pink">moving now.</span></h2>
+      </div>
+      <p class="lede">Every glowing line is a same-day corridor. Tap a city to see which lanes light up from there.</p>
+    </div>
+    <ul class="live__feat">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><span>Same-day<br>delivery</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><span>Competitive<br>pricing</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Nationwide<br>network</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span>Tracked<br>&amp; secure</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg><span>AI-powered<br>logistics</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16.5h6"/></svg><span>Autonomous<br>future</span></li>
+    </ul>
+    <div class="live__scroll" id="liveScroll">
+      <div class="live__stage" id="liveStage">
+        <img class="live__map" src="assets/img/network-map.webp" width="1600" height="632" alt="Glowing map of the United States with SPRINTER vans travelling between major cities" loading="lazy">
+        <svg class="live__svg" id="liveSvg" viewBox="0 0 1600 632" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="live__pins" id="livePins"></div>
+        <div class="live__tip" id="liveTip" role="status" aria-live="polite"></div>
+        <div class="live__card live__stats">
+          <div class="ls"><span class="ls__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b><span id="liveCount">3,000</span>+</b><small>Planned drop-off &amp; pickup points</small></div></div>
+          <div class="ls"><span class="ls__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><div><b>Nationwide coverage</b><small>Major cities and beyond</small></div></div>
+          <div class="ls"><span class="ls__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Same-day delivery</b><small>When timing matters</small></div></div>
+        </div>
+        <div class="live__card live__track">
+          <p class="lt__h">Your package on the move</p>
+          <div class="lt__line"><i class="lt__fill"></i><span class="lt__n n1"></span><span class="lt__n n2"></span><span class="lt__n n3"></span></div>
+          <div class="lt__lbl">
+            <span class="l1"><b>Picked up</b>8:14 AM</span>
+            <span class="l2"><b>In transit</b>12:27 PM</span>
+            <span class="l3"><b>Out for delivery</b>2:18 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="live__hint">Swipe to explore &rarr;</p>
   </div>
 </section>
 
@@ -699,11 +881,24 @@
     </div>
   </div>
 </section>
+
+<!-- CLOSING STATEMENT -->
+<section class="finale dark" id="finale" aria-labelledby="finaleTitle">
+  <canvas id="finaleStreaks" aria-hidden="true"></canvas>
+  <div class="finale__glow" aria-hidden="true"></div>
+  <div class="finale__flash" aria-hidden="true"></div>
+  <div class="finale__pin">
+    <div class="wrap">
+      <h2 class="display finale__title" id="finaleTitle"><span class="fw">When</span> <span class="fw">it</span> <span class="fw">has</span> <span class="fw">to</span> <span class="fw">be</span> <span class="fw">there</span> <span class="fw fw--hit">today!</span></h2>
+      <p class="finale__sub">The next generation of intelligent package delivery starts today.</p>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="foot dark">
   <div class="wrap foot__in">
-    <img src="assets/img/logo.png" alt="SPRINTER">
+    <img src="assets/img/logo.svg" alt="SPRINTER">
     <nav aria-label="Footer"><a href="#solution">About</a><a href="#tech">Technology</a><a href="#services">Services</a><a href="#drivers">Drivers</a><a href="#robotics">Robotics</a><a href="#who">Expertise</a><a href="#why">Benefits</a><a href="#team">Team</a><a href="#contact">Contact</a></nav>
     <span>© 2026 Concord Pacific Corp. · sprinterone.us</span>
   </div>
