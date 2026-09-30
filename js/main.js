@@ -394,24 +394,27 @@
     const vid = $('#heroVideo'); if (!vid) return null;
     const box = vid.closest('.hero__photo'), stamp = $('#heroStamp'), replay = $('#heroReplay');
     const END = 'assets/video/sprinter-van-end.webp', boost = { v: 1 };
-    let playing = false;
+    let playing = false, growTl = null;
     vid.muted = true;
     const speed = v => { if (!heroStreaks) return; if (hasGsap) gsap.to(boost, { v, duration: 1, ease: 'power2.out', onUpdate: () => heroStreaks.speed(boost.v) }); else heroStreaks.speed(v); };
     const land = () => {
       playing = false; box.classList.add('is-ended'); speed(1); replay.hidden = false;
       if (hasGsap && !reduce) {
-        gsap.timeline()
+        growTl && growTl.kill();
+        growTl = gsap.timeline()
           .fromTo(box.querySelector('.hero__flash'), { opacity: 0 }, { opacity: .85, duration: .06, ease: 'none' })
           .to(box.querySelector('.hero__flash'), { opacity: 0, duration: .7, ease: 'power2.out' })
           .fromTo(stamp, { opacity: 0, scale: 3.4, rotate: -16, filter: 'blur(16px)' }, { opacity: 1, scale: 1, rotate: -5, filter: 'blur(0px)', duration: .75, ease: 'expo.out' }, 0)
           .fromTo(box, { x: 0 }, { keyframes: { x: [0, -9, 7, -4, 2, 0] }, duration: .4, ease: 'none' }, .12)
           .fromTo('.hero .price-tag b', { scale: 1 }, { scale: 1.28, duration: .22, yoyo: true, repeat: 1, ease: 'power2.out', transformOrigin: '0% 75%' }, .3)
-          .fromTo(replay, { opacity: 0, scale: .5 }, { opacity: 1, scale: 1, duration: .5, ease: 'back.out(2)' }, .7);
+          .fromTo(replay, { opacity: 0, scale: .5 }, { opacity: 1, scale: 1, duration: .5, ease: 'back.out(2)' }, .7)
+          /* then the price keeps growing slowly so the eye stays on it */
+          .to(stamp, { scale: 1.3, rotate: -3, duration: 9, ease: 'sine.out' }, 1.1);
       } else { stamp.style.opacity = 1; }
     };
     const play = () => {
       if (playing) return; playing = true;
-      box.classList.remove('is-ended'); stamp.style.opacity = 0; replay.hidden = true;
+      box.classList.remove('is-ended'); growTl && growTl.kill(); hasGsap && gsap.set(stamp, { opacity: 0, scale: 1 }); replay.hidden = true;
       try { vid.currentTime = 0; } catch (e) {}
       speed(3.2);
       const p = vid.play();
