@@ -443,6 +443,8 @@
   /* preloader → hero intro */
   const heroChars = split($('.hero__title'));
   gsap.set(heroChars, { yPercent: 115 });
+  const sloganW = $$('#heroSlogan .sw');
+  gsap.set(sloganW, { opacity: 0, scale: 2.8, filter: 'blur(22px)', yPercent: 25 });
   const kickChars = split($('#heroKicker'));
   gsap.set(kickChars, { yPercent: 125, rotate: 9 });
   gsap.set('.k-bar', { scaleX: 0 });
@@ -463,6 +465,9 @@
     .from('.hero__photo img', { scale: 1.5, duration: 1.8, ease: 'expo.out' }, '<')
     .from('.hero__visual .float, .badge', { y: 30, opacity: 0, scale: .9, stagger: .12, duration: .8, ease: 'back.out(1.6)' }, '-=.9');
   /* big headline: letters rise in a wave, the underline sweeps, "same-day" pulses (~2s) */
+  /* slogan: words slam in one by one, "today!" lands with a shake (~2s) */
+  intro.to(sloganW, { opacity: 1, scale: 1, filter: 'blur(0px)', yPercent: 0, duration: .6, stagger: .22, ease: 'expo.out' }, 'heroIn+=1.1')
+    .fromTo('#heroSlogan', { x: 0 }, { keyframes: { x: [0, -9, 7, -4, 2, 0] }, duration: .4, ease: 'none' }, 'heroIn+=2.15');
   intro.to(kickChars, { yPercent: 0, rotate: 0, duration: .8, stagger: { each: .028, from: 'start' }, ease: 'back.out(1.8)' }, 'heroIn+=.1')
     .to('.k-bar', { scaleX: 1, duration: .9, ease: 'expo.out' }, 'heroIn+=1.05')
     .fromTo('#heroKicker .pink .c', { color: '#FF6B1A' }, { color: '#E0127A', duration: .7, stagger: .07, ease: 'power2.out' }, 'heroIn+=1');
