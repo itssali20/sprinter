@@ -389,6 +389,49 @@
       let t = null; if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { clearInterval(t); if (en.isIntersecting) t = setInterval(auto, 5200); }, { threshold: .4 }).observe(stage); }
   })();
 
+  /* ---------- hero van film: plays after the slogan, then "Starting at $99" slams in ---------- */
+  const heroFilm = (function () {
+    const vid = $('#heroVideo'); if (!vid) return null;
+    const box = vid.closest('.hero__photo'), stamp = $('#heroStamp'), replay = $('#heroReplay');
+    const END = 'assets/video/sprinter-van-end.webp', boost = { v: 1 };
+    let playing = false;
+    vid.muted = true;
+    const speed = v => { if (!heroStreaks) return; if (hasGsap) gsap.to(boost, { v, duration: 1, ease: 'power2.out', onUpdate: () => heroStreaks.speed(boost.v) }); else heroStreaks.speed(v); };
+    const land = () => {
+      playing = false; box.classList.add('is-ended'); speed(1); replay.hidden = false;
+      if (hasGsap && !reduce) {
+        gsap.timeline()
+          .fromTo(box.querySelector('.hero__flash'), { opacity: 0 }, { opacity: .85, duration: .06, ease: 'none' })
+          .to(box.querySelector('.hero__flash'), { opacity: 0, duration: .7, ease: 'power2.out' })
+          .fromTo(stamp, { opacity: 0, scale: 3.4, rotate: -16, filter: 'blur(16px)' }, { opacity: 1, scale: 1, rotate: -5, filter: 'blur(0px)', duration: .75, ease: 'expo.out' }, 0)
+          .fromTo(box, { x: 0 }, { keyframes: { x: [0, -9, 7, -4, 2, 0] }, duration: .4, ease: 'none' }, .12)
+          .fromTo('.hero .price-tag b', { scale: 1 }, { scale: 1.28, duration: .22, yoyo: true, repeat: 1, ease: 'power2.out', transformOrigin: '0% 75%' }, .3)
+          .fromTo(replay, { opacity: 0, scale: .5 }, { opacity: 1, scale: 1, duration: .5, ease: 'back.out(2)' }, .7);
+      } else { stamp.style.opacity = 1; }
+    };
+    const play = () => {
+      if (playing) return; playing = true;
+      box.classList.remove('is-ended'); stamp.style.opacity = 0; replay.hidden = true;
+      try { vid.currentTime = 0; } catch (e) {}
+      speed(3.2);
+      const p = vid.play();
+      p && p.catch(() => { vid.poster = END; land(); });
+    };
+    vid.addEventListener('ended', land);
+    replay.addEventListener('click', play);
+    return {
+      /* play now if the film is on screen, otherwise as soon as it scrolls into view (phones) */
+      go() {
+        const r = box.getBoundingClientRect();
+        if (r.top < innerHeight * .8 && r.bottom > innerHeight * .15) return play();
+        if (!('IntersectionObserver' in window)) return play();
+        const io = new IntersectionObserver(([en]) => { if (en.isIntersecting) { io.disconnect(); play(); } }, { threshold: .55 });
+        io.observe(box);
+      },
+      still() { vid.poster = END; vid.preload = 'metadata'; land(); }
+    };
+  })();
+
   /* ---------- no GSAP / reduced motion: static, complete page ---------- */
   if (!hasGsap || reduce) {
     const l = $('.loader'); l && l.remove();
@@ -399,6 +442,7 @@
     map && map.set(1); heroStreaks && heroStreaks.once(); finaleStreaks && finaleStreaks.once();
     const cp = $('#carPkg'); cp && cp.setAttribute('opacity', 1); const pk = $('#pkg'); pk && pk.setAttribute('opacity', 0);
     const car = $('#car'); car && car.setAttribute('transform', 'translate(700 318)');
+    heroFilm && heroFilm.still();
     initNav(null); initAnchors(null);
     return;
   }
@@ -462,12 +506,14 @@
     .from('[data-hero]', { y: 40, opacity: 0, duration: 1, stagger: .09 }, '-=.9')
     .from('.nav', { yPercent: -100, duration: .9 }, '<')
     .from('.hero__photo', { clipPath: 'inset(100% 0 0 0 round 32px)', duration: 1.4, ease: 'expo.inOut' }, '<-.5')
-    .from('.hero__photo img', { scale: 1.5, duration: 1.8, ease: 'expo.out' }, '<')
-    .from('.hero__visual .float, .badge', { y: 30, opacity: 0, scale: .9, stagger: .12, duration: .8, ease: 'back.out(1.6)' }, '-=.9');
+    .from('.hero__photo video', { scale: 1.5, duration: 1.8, ease: 'expo.out', clearProps: 'transform' }, '<')
+    .from('.hero__visual .float', { y: 30, opacity: 0, scale: .9, stagger: .12, duration: .8, ease: 'back.out(1.6)' }, '-=.9');
   /* big headline: letters rise in a wave, the underline sweeps, "same-day" pulses (~2s) */
   /* slogan: words slam in one by one, "today!" lands with a shake (~2s) */
   intro.to(sloganW, { opacity: 1, scale: 1, filter: 'blur(0px)', yPercent: 0, duration: .6, stagger: .22, ease: 'expo.out' }, 'heroIn+=1.1')
-    .fromTo('#heroSlogan', { x: 0 }, { keyframes: { x: [0, -9, 7, -4, 2, 0] }, duration: .4, ease: 'none' }, 'heroIn+=2.15');
+    .fromTo('#heroSlogan', { x: 0 }, { keyframes: { x: [0, -9, 7, -4, 2, 0] }, duration: .4, ease: 'none' }, 'heroIn+=2.15')
+    /* the van rolls out right after the slogan lands */
+    .call(() => heroFilm && heroFilm.go(), null, 'heroIn+=2.5');
   intro.to(kickChars, { yPercent: 0, rotate: 0, duration: .8, stagger: { each: .028, from: 'start' }, ease: 'back.out(1.8)' }, 'heroIn+=.1')
     .to('.k-bar', { scaleX: 1, duration: .9, ease: 'expo.out' }, 'heroIn+=1.05')
     .fromTo('#heroKicker .pink .c', { color: '#FF6B1A' }, { color: '#E0127A', duration: .7, stagger: .07, ease: 'power2.out' }, 'heroIn+=1');
@@ -476,7 +522,6 @@
   gsap.fromTo('.mini-line i', { width: '8%' }, { width: '92%', duration: 6, repeat: -1, ease: 'none' });
   heroStreaks && heroStreaks.start();
   ScrollTrigger.create({ trigger: '#hero', start: 'top bottom', end: 'bottom top', onToggle: s => s.isActive ? heroStreaks.start() : heroStreaks.stop() });
-  gsap.to('.hero__photo img', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
 
   /* image parallax + services reveal */
   $$('[data-parallax] img').forEach(img => gsap.fromTo(img, { yPercent: -8 }, { yPercent: 4, ease: 'none', scrollTrigger: { trigger: img.closest('[data-parallax]'), start: 'top bottom', end: 'bottom top', scrub: true } }));
