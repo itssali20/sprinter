@@ -25,10 +25,13 @@
     return Math.round(2 * R * Math.asin(Math.sqrt(h)) * 1.1);
   };
 
+  /* visually hidden copy of animated text, so screen readers read whole words */
+  function srText(el, text) { const t = document.createElement('span'); t.className = 'sr-only'; t.textContent = text; el.appendChild(t); }
+
   /* ---------- split text ---------- */
   function split(el) {
     if (el.dataset.done) return $$('.c', el);
-    el.setAttribute('aria-label', el.textContent.trim().replace(/\s+/g, ' '));
+    const label = el.textContent.trim().replace(/\s+/g, ' ');
     const walk = node => {
       [...node.childNodes].forEach(n => {
         if (n.nodeType === 3) {
@@ -44,7 +47,7 @@
         } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
       });
     };
-    walk(el); el.dataset.done = 1;
+    walk(el); el.dataset.done = 1; srText(el, label);
     return $$('.c', el);
   }
 
@@ -226,7 +229,7 @@
       a: (.12 + Math.random() * .5) * o.alpha, z: .3 + Math.random() * .7
     });
     function size() {
-      dpr = Math.min(devicePixelRatio || 1, 2); W = canvas.clientWidth; H = canvas.clientHeight;
+      dpr = fine ? Math.min(devicePixelRatio || 1, 2) : 1; W = canvas.clientWidth; H = canvas.clientHeight;
       canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       items = Array.from({ length: Math.round(o.count * Math.min(1, W / 1200) + 20) }, () => make(true));
     }
@@ -264,7 +267,7 @@
     let W, H, dpr, s, cx, cy, dots = [], progress = 0, t = 0, running = false;
     const proj = (lon, lat) => [cx + (lon + 95.5) * k * s, cy - (lat - 37.2) * s];
     function size() {
-      dpr = Math.min(devicePixelRatio || 1, 2); W = canvas.clientWidth; H = canvas.clientHeight;
+      dpr = fine ? Math.min(devicePixelRatio || 1, 2) : 1; W = canvas.clientWidth; H = canvas.clientHeight;
       canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       s = Math.min((W * .9) / (59 * k), (H * .82) / 26); cx = W / 2; cy = H / 2 - H * .02;
       dots = []; const step = Math.max(6, W / 78);
@@ -569,7 +572,7 @@
       if (n.nodeType === 3) { const f = document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(p => { if (!p) return; if (/^\s+$/.test(p)) f.appendChild(document.createTextNode(' ')); else { const s = document.createElement('span'); s.className = 'word'; s.textContent = p; f.appendChild(s); } }); n.replaceWith(f); }
       else if (n.nodeType === 1) walk(n);
     });
-    walk(el); el.setAttribute('aria-label', label);
+    walk(el); srText(el, label);
     gsap.to('.better .word', { opacity: 1, stagger: .3, ease: 'none', scrollTrigger: { trigger: '.better', start: 'top 75%', end: 'bottom 55%', scrub: true } });
   })();
 
@@ -718,8 +721,9 @@
   (function finale() {
     const sec = $('#finale'); if (!sec) return;
     const words = $$('.fw', sec), sub = $('.finale__sub', sec), flash = $('.finale__flash', sec), title = $('.finale__title', sec);
-    sub.setAttribute('aria-label', sub.textContent.trim());
+    const subLabel = sub.textContent.trim();
     sub.innerHTML = sub.textContent.trim().split(/\s+/).map(w => `<span class="fs" aria-hidden="true">${w}</span>`).join(' ');
+    srText(sub, subLabel);
     const subW = $$('.fs', sub), fx = { v: 1 };
     const tl = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } });
     words.forEach((w, i) => {

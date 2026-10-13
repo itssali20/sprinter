@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sprinterone.us/sitemap.xml
