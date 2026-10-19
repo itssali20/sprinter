@@ -528,6 +528,11 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .apps__track span{padding:12px 20px;border-radius:99px;white-space:nowrap;font-size:.98rem;background:var(--surface)}
 .robo__tag{text-align:center;margin-top:clamp(60px,8vw,100px)}
 .robo__tag .display{font-size:clamp(1.7rem,4.4vw,4.2rem)}
+.robo__price{margin-top:18px;padding:clamp(28px,4vw,48px);border-radius:24px;background:var(--surface);border:1px solid var(--pink);display:grid;gap:12px;text-align:center;justify-items:center}
+.robo__price small{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink)}
+.robo__price .display{font-size:clamp(2rem,5vw,4.4rem);margin:0}
+.robo__price-claim{margin:0;font-size:clamp(1rem,1.6vw,1.3rem);text-transform:uppercase;letter-spacing:.04em;max-width:34ch}
+.robo__price-claim b{color:var(--pink);font-size:1.4em}
 @media (max-width:700px){.robo__facts{grid-template-columns:1fr}}
 
 /* ---------- robot fleet: 3 large features + carousel ---------- */
