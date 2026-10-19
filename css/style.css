@@ -427,16 +427,28 @@ section{position:relative}
 @media (max-width:860px){.aud{grid-template-columns:1fr}.aud__tabs{grid-template-columns:repeat(2,1fr)}}
 
 /* ---------- built different ---------- */
+.diff{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.diff__main .h2{margin-top:20px}
+.diff__main .lede{margin:18px 0 34px}
+.diff__visual{position:sticky;top:120px;border-radius:28px}
+.diff__visual img{display:block;width:100%;height:auto;border-radius:28px;box-shadow:var(--shadow)}
+.diff__badge{position:absolute;left:clamp(-24px,-2vw,-12px);bottom:clamp(-24px,-2vw,-12px);width:clamp(120px,14vw,170px);aspect-ratio:1;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-content:center;text-align:center;transform:rotate(-8deg);box-shadow:0 14px 36px rgba(224,18,122,.35)}
+.diff__badge small{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.diff__badge b{font-family:var(--f-display);font-style:italic;font-weight:900;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1}
+.diff__n{font-family:var(--f-mono);font-size:.8rem;color:var(--mute)}
+.diff__row>div{display:grid;gap:6px}
 .diff__list{border-top:1.5px solid var(--fg)}
-.diff__row{position:relative;display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:center;padding:28px 12px;border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate;transition:color .45s var(--ease)}
+.diff__row{position:relative;display:grid;grid-template-columns:44px 40px minmax(0,1fr);gap:18px;align-items:center;padding:22px 12px;border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate;transition:color .45s var(--ease)}
 .diff__row::before{content:"";position:absolute;inset:0;background:var(--pink);transform:scaleY(0);transform-origin:bottom;transition:transform .55s var(--ease);z-index:-1}
 .diff__row:hover{color:#fff}
 .diff__row:hover::before{transform:scaleY(1)}
 .diff__row:hover p{color:rgba(255,255,255,.88)}
 .diff__row svg{width:36px;height:36px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.diff__row .display{font-size:clamp(1.5rem,3.2vw,3rem);line-height:.95}
+.diff__row .display{font-size:clamp(1.3rem,2.4vw,2.1rem);line-height:1;color:var(--fg)}
 .diff__row p{margin:0;color:var(--mute);transition:color .45s}
-@media (max-width:760px){.diff__row{grid-template-columns:44px 1fr}.diff__row p:last-child{grid-column:2}}
+.diff__row:hover .display,.diff__row:hover .diff__n{color:#fff}
+@media (max-width:900px){.diff{grid-template-columns:1fr}.diff__visual{position:relative;top:0;max-width:560px;margin:10px auto 0}}
+@media (max-width:520px){.diff__row{grid-template-columns:30px 32px minmax(0,1fr);gap:12px}.diff__badge{left:-6px;bottom:-14px}}
 
 /* ---------- drivers ---------- */
 .drivers{overflow:hidden}
@@ -528,11 +540,6 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .apps__track span{padding:12px 20px;border-radius:99px;white-space:nowrap;font-size:.98rem;background:var(--surface)}
 .robo__tag{text-align:center;margin-top:clamp(60px,8vw,100px)}
 .robo__tag .display{font-size:clamp(1.7rem,4.4vw,4.2rem)}
-.robo__price{margin-top:18px;padding:clamp(28px,4vw,48px);border-radius:24px;background:var(--surface);border:1px solid var(--pink);display:grid;gap:12px;text-align:center;justify-items:center}
-.robo__price small{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink)}
-.robo__price .display{font-size:clamp(2rem,5vw,4.4rem);margin:0}
-.robo__price-claim{margin:0;font-size:clamp(1rem,1.6vw,1.3rem);text-transform:uppercase;letter-spacing:.04em;max-width:34ch}
-.robo__price-claim b{color:var(--pink);font-size:1.4em}
 @media (max-width:700px){.robo__facts{grid-template-columns:1fr}}
 
 /* ---------- robot fleet: 3 large features + carousel ---------- */
