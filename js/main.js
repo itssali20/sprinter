@@ -713,7 +713,7 @@
 
   /* ---- FINAL ---- */
   gsap.from('.final__big', { yPercent: 40, scaleY: 1.4, opacity: 0, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.final__big', start: 'top 90%' } });
-  gsap.fromTo('.courier img', { y: 80 }, { y: 0, ease: 'none', scrollTrigger: { trigger: '.final__grid', start: 'top bottom', end: 'bottom bottom', scrub: 1 } });
+  gsap.fromTo('.courier video', { y: 80 }, { y: 0, ease: 'none', scrollTrigger: { trigger: '.final__grid', start: 'top bottom', end: 'bottom bottom', scrub: 1 } });
   gsap.from('.courier', { scale: .85, opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '.final__grid', start: 'top 80%' } });
   gsap.from('.contact', { y: 60, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: '.final__grid', start: 'top 80%' } });
 
